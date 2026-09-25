@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  DEMO WEBSITE — HOW TO CUSTOMIZE FOR A REAL CLIENT
+  ------------------------------------------------------------
+  1. Business name, tagline, phone, WhatsApp, address, hours:
+     find-and-replace the placeholder text directly in this file
+     (e.g. "+91 90000 00000", the business name in the header,
+     hero and footer).
+  2. Photos: every image in the gallery has class="slot-img" —
+     replace its src="..." with the client's real photo (a file
+     path or an image URL). The dashed border and caption are
+     placeholder styling only and disappear once a real photo
+     is swapped in that isn't a plain color placeholder.
+  3. Services / menu / plans: edit the text directly inside each
+     card — plain HTML, no code logic involved.
+  4. Google Maps: replace the "map-box" placeholder div with the
+     client's real Google Maps embed <iframe>.
+  ============================================================
+-->
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>QuickFix Computer & Repair Centre — Demo Website by Mirrzora Digital Solutions</title>
+<meta name="description" content="Demo local service business website built by Mirrzora Digital Solutions — services, service area, and WhatsApp/call enquiry, mobile-first.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%23125E5A'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--primary:#125E5A;--primary-deep:#0B3E3B;--accent:#E1A73E;--paper:#F4F7F6;--card:#FFFFFF;--ink:#1C2321;--ink-soft:#5A6660;--line:#D9E2DF;--safe-t:env(safe-area-inset-top,0px);--safe-b:env(safe-area-inset-bottom,0px);}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:'Work Sans',sans-serif;line-height:1.55;padding-bottom:calc(60px + var(--safe-b));}
+h1,h2,h3{font-family:'Fraunces',serif;color:var(--primary-deep);margin:0;font-weight:600;}
+p{margin:0;color:var(--ink-soft);}
+a{text-decoration:none;color:inherit;}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px;}
+section{padding:52px 0;}
+.demo-banner{background:var(--primary-deep);color:#fff;text-align:center;font-size:.82rem;padding:9px 14px;padding-top:calc(9px + var(--safe-t));}
+.demo-banner a{color:var(--accent);font-weight:600;}
+header{position:sticky;top:0;background:rgba(244,247,246,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);z-index:20;}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;max-width:1040px;margin:0 auto;}
+.brand{font-family:'Fraunces',serif;font-size:1.15rem;color:var(--primary-deep);}
+.nav a.btn{background:var(--primary);color:#fff;padding:9px 18px;border-radius:999px;font-weight:600;font-size:.88rem;}
+.hero{padding:56px 0 40px;text-align:center;}
+.hero h1{font-size:clamp(1.8rem,4.3vw,2.6rem);}
+.hero p{margin-top:14px;max-width:540px;margin-left:auto;margin-right:auto;font-size:1.05rem;}
+.hero-ctas{margin-top:26px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+.btn{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:600;font-size:.92rem;}
+.btn-primary{background:var(--primary);color:#fff;}
+.btn-outline{border:1.5px solid var(--primary);color:var(--primary);}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.svc{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;}
+.svc h3{font-size:1rem;}
+.svc p{margin-top:8px;font-size:.9rem;}
+.area-chip{display:inline-block;background:var(--card);border:1px solid var(--line);padding:7px 14px;border-radius:999px;font-size:.85rem;margin:4px 6px 0 0;color:var(--ink-soft);}
+.review-note{background:var(--card);border:1px dashed var(--line);border-radius:12px;padding:20px;font-size:.9rem;color:var(--ink-soft);text-align:center;margin-top:30px;}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;}
+.contact-item{display:flex;gap:12px;padding:12px 0;border-top:1px solid var(--line);}
+.contact-item:first-child{border-top:none;}
+.map-box{background:var(--card);border:1px solid var(--line);border-radius:12px;min-height:180px;display:flex;align-items:center;justify-content:center;color:var(--ink-soft);font-size:.86rem;text-align:center;padding:18px;}
+footer{background:var(--primary-deep);color:rgba(255,255,255,.8);text-align:center;padding:26px 20px;font-size:.82rem;}
+footer a{color:var(--accent);font-weight:600;}
+.sticky-bar{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:1px;background-color:var(--line);padding-bottom:var(--safe-b);}
+.sticky-bar a{background:#fff;display:flex;align-items:center;justify-content:center;gap:6px;padding:12px;font-weight:600;font-size:.85rem;color:var(--primary-deep);}
+.sticky-bar a.primary{background:var(--primary);color:#fff;}
+@media(max-width:760px){.grid3{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="demo-banner">Demo Project by Mirrzora Digital Solutions — <a href="index.html" target="_blank" rel="noopener">See our services →</a></div>
+<header><div class="nav"><span class="brand">QuickFix Computer &amp; Repair</span><a class="btn" href="https://wa.me/919000000000?text=Hi%2C%20I%20need%20a%20repair" target="_blank" rel="noopener">WhatsApp Us</a></div></header>
+
+<section class="hero wrap">
+  <h1>Fast, Honest Computer &amp; Device Repairs</h1>
+  <p>Laptops, desktops, printers and mobile repairs with same-day service for most issues. Home pickup available.</p>
+  <div class="hero-ctas">
+    <a class="btn btn-primary" href="https://wa.me/919000000000" target="_blank" rel="noopener">WhatsApp Us</a>
+    <a class="btn btn-outline" href="tel:+919000000000">Call Now</a>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2 style="margin-bottom:24px;">Our Services</h2>
+  <div class="grid3">
+    <div class="svc"><h3>Laptop &amp; Desktop Repair</h3><p>Hardware faults, screen replacement, slow-system fixes.</p></div>
+    <div class="svc"><h3>Data Recovery &amp; Backup</h3><p>Recovering lost files and setting up reliable backups.</p></div>
+    <div class="svc"><h3>Printer &amp; Networking</h3><p>Printer setup, Wi-Fi and small-office networking support.</p></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2 style="margin-bottom:16px;">Service Area</h2>
+  <div><span class="area-chip">Bally</span><span class="area-chip">Howrah</span><span class="area-chip">Liluah</span><span class="area-chip">Belur</span><span class="area-chip">Nearby areas on request</span></div>
+  <div class="review-note">Customer reviews would appear here, supplied and approved by the business.</div>
+</section>
+
+<section class="wrap contact-grid">
+  <div>
+    <h2 style="margin-bottom:16px;">Contact Us</h2>
+    <div class="contact-item"><strong>📞 Phone</strong>&nbsp; +91 90000 00000</div>
+    <div class="contact-item"><strong>💬 WhatsApp</strong>&nbsp; +91 90000 00000</div>
+    <div class="contact-item"><strong>📍 Location</strong>&nbsp; Bally, Howrah</div>
+    <div class="contact-item"><strong>🕐 Hours</strong>&nbsp; Mon–Sat, 10am–7pm</div>
+  </div>
+  <div class="map-box">Google Maps embed placeholder</div>
+</section>
+
+<footer>Demo Project — built by <a href="index.html" target="_blank" rel="noopener">Mirrzora Digital Solutions</a></footer>
+<div class="sticky-bar"><a href="https://wa.me/919000000000" target="_blank" rel="noopener">💬 WhatsApp</a><a class="primary" href="tel:+919000000000">📞 Call</a></div>
+<div class="lightbox" id="lightbox"><button class="lb-close" id="lbClose" aria-label="Close">&times;</button><img id="lbImg" src="" alt=""></div>
+<script>
+// Photo slots: click any photo to preview. To use real photos, just change each
+// <img class="slot-img" src="..."> to your own image file/URL — nothing else needs editing.
+document.querySelectorAll('.photo-slot img').forEach(img=>{
+  img.addEventListener('click', ()=>{
+    document.getElementById('lbImg').src = img.src;
+    document.getElementById('lbImg').alt = img.alt;
+    document.getElementById('lightbox').classList.add('open');
+  });
+});
+document.getElementById('lbClose').addEventListener('click', ()=>document.getElementById('lightbox').classList.remove('open'));
+document.getElementById('lightbox').addEventListener('click', e=>{ if(e.target.id==='lightbox') e.currentTarget.classList.remove('open'); });
+</script>
+</body>
+</html>

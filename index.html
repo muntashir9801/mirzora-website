@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  HOW TO CUSTOMIZE THIS SITE
+  ------------------------------------------------------------
+  1. Business details (phone, WhatsApp, email, hours, area):
+     edit the CONFIG object near the bottom of the <script> tag.
+  2. Photos: search this file for class="photo-slot" or
+     class="slot-img" and swap the placeholder image src for a
+     real photo URL or your own uploaded image — nothing else
+     needs to change, the layout adapts automatically.
+  3. Prices, service text and FAQ answers: edit directly in the
+     matching <section> below — each is plain HTML.
+  4. Google Maps: replace the "map-box" placeholder div with your
+     real Google Maps embed <iframe> once you have the address.
+  ============================================================
+-->
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Google Business Profile & Website Services for Local Businesses | Mirrzora Digital Solutions</title>
+<meta name="description" content="Google Business Profile optimization, local business websites, WhatsApp integration and online presence services for businesses in Kolkata and across India.">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mirrzora Digital Solutions — Local Business Online Presence Services">
+<meta property="og:description" content="Get found on Google. Look professional online. Make it easier for customers to contact you.">
+<meta property="og:locale" content="en_IN">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%230F4C43'/%3E%3Ctext x='50' y='66' font-size='56' text-anchor='middle' fill='%23E1A73E' font-family='Georgia,serif'%3ET%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F7F5F0;
+  --paper-2:#EFEBE2;
+  --ink:#1C2321;
+  --ink-soft:#4B554F;
+  --teal:#0F4C43;
+  --teal-deep:#0A342E;
+  --gold:#E1A73E;
+  --gold-deep:#B9832A;
+  --line:#D9D3C4;
+  --white:#FFFFFF;
+  --radius:14px;
+  --max:1120px;
+  --safe-t:env(safe-area-inset-top,0px);
+  --safe-b:env(safe-area-inset-bottom,0px);
+  font-size:16px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-padding-top:76px;}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:'Work Sans',system-ui,-apple-system,sans-serif;
+  line-height:1.55;-webkit-font-smoothing:antialiased;
+  padding-bottom:calc(64px + var(--safe-b));
+}
+h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:500;line-height:1.15;margin:0;color:var(--teal-deep);}
+h1{font-weight:600;}
+p{margin:0;color:var(--ink-soft);}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 22px;}
+section{padding:64px 0;}
+.eyebrow{display:block;color:var(--gold-deep);font-size:.85rem;margin-bottom:10px;font-weight:600;letter-spacing:.02em;}
+.section-head{max-width:640px;margin-bottom:40px;}
+.section-head h2{font-size:clamp(1.6rem,3.2vw,2.3rem);}
+.section-head p{margin-top:12px;font-size:1.05rem;}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:13px 24px;border-radius:999px;font-weight:600;font-size:.97rem;
+  border:1.5px solid transparent;cursor:pointer;transition:transform .15s ease, background .15s ease;
+}
+.btn:active{transform:scale(.97);}
+.btn-primary{background:var(--teal);color:var(--white);}
+.btn-primary:hover{background:var(--teal-deep);}
+.btn-gold{background:var(--gold);color:var(--teal-deep);}
+.btn-gold:hover{background:var(--gold-deep);color:var(--white);}
+.btn-outline{background:transparent;border-color:var(--teal);color:var(--teal);}
+.btn-outline:hover{background:var(--teal);color:var(--white);}
+.btn-outline-light{background:transparent;border-color:rgba(255,255,255,.5);color:var(--white);}
+.btn-outline-light:hover{background:rgba(255,255,255,.12);}
+.btn-sm{padding:9px 18px;font-size:.88rem;}
+
+/* NAVBAR */
+header{
+  position:sticky;top:0;z-index:50;background:rgba(247,245,240,.92);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);padding-top:var(--safe-t);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 22px;max-width:var(--max);margin:0 auto;}
+.brand{display:flex;align-items:center;gap:9px;font-family:'Fraunces',serif;font-weight:600;font-size:1.25rem;color:var(--teal-deep);}
+.brand .dot{width:10px;height:10px;border-radius:50%;background:var(--gold);}
+.nav-links{display:flex;gap:28px;list-style:none;margin:0;padding:0;}
+.nav-links a{font-size:.94rem;font-weight:500;color:var(--ink-soft);}
+.nav-links a:hover{color:var(--teal);}
+.nav-cta{display:flex;align-items:center;gap:14px;}
+.burger{display:none;background:none;border:none;cursor:pointer;padding:6px;}
+.burger span{display:block;width:24px;height:2px;background:var(--ink);margin:5px 0;transition:.2s;}
+.mobile-panel{display:none;flex-direction:column;gap:2px;background:var(--paper);border-bottom:1px solid var(--line);padding:8px 22px 18px;}
+.mobile-panel a{padding:12px 4px;border-bottom:1px solid var(--line);font-weight:500;}
+.mobile-panel.open{display:flex;}
+@media(max-width:860px){
+  .nav-links,.nav-cta .btn-outline{display:none;}
+  .burger{display:block;}
+}
+
+/* HERO */
+.hero{padding:56px 0 48px;}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;}
+.hero h1{font-size:clamp(2.1rem,4.6vw,3.4rem);}
+.hero .lead{font-size:1.13rem;margin-top:18px;max-width:520px;}
+.hero-ctas{display:flex;gap:14px;margin-top:28px;flex-wrap:wrap;}
+.trust-line{margin-top:22px;font-size:.88rem;color:var(--ink-soft);}
+.trust-line b{color:var(--teal);}
+
+.hero-visual{position:relative;background:var(--teal);border-radius:20px;padding:28px;min-height:340px;overflow:hidden;isolation:isolate;}
+.hv-card{position:relative;z-index:1;background:var(--white);border-radius:12px;padding:14px 16px;margin-bottom:12px;display:flex;align-items:center;gap:12px;box-shadow:0 8px 22px rgba(10,52,46,.18);}
+.hv-icon{width:34px;height:34px;border-radius:8px;background:var(--paper-2);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.hv-card b{display:block;font-size:.92rem;color:var(--ink);}
+.hv-card span{font-size:.8rem;color:var(--ink-soft);}
+.hv-pin{position:absolute;right:18px;bottom:14px;opacity:.9;}
+
+/* PROBLEM */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.compare-col{border-radius:var(--radius);padding:26px;border:1px solid var(--line);}
+.compare-col.before{background:var(--white);}
+.compare-col.after{background:var(--teal);color:var(--white);}
+.compare-col h3{margin-bottom:14px;font-size:1.1rem;}
+.compare-col.after h3{color:var(--gold);}
+.compare-col ul{margin:0;padding:0;list-style:none;}
+.compare-col li{padding:8px 0;border-top:1px solid var(--line);font-size:.95rem;color:var(--ink-soft);}
+.compare-col.after li{border-top:1px solid rgba(255,255,255,.18);color:rgba(255,255,255,.92);}
+.compare-col li:first-child{border-top:none;}
+.problem-list{margin-top:36px;display:grid;grid-template-columns:repeat(2,1fr);gap:10px 24px;}
+.problem-list li{font-size:.96rem;color:var(--ink-soft);padding-left:18px;position:relative;}
+.problem-list li::before{content:"–";position:absolute;left:0;color:var(--gold-deep);}
+
+/* SERVICES */
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.svc-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:26px;display:flex;flex-direction:column;gap:14px;}
+.svc-num{font-size:.8rem;color:var(--gold-deep);font-weight:600;}
+.svc-card h3{font-size:1.15rem;}
+.svc-card p{font-size:.94rem;}
+.svc-card ul{margin:4px 0 0;padding:0 0 0 18px;font-size:.9rem;color:var(--ink-soft);}
+.svc-card li{margin-bottom:4px;}
+.svc-card .btn{margin-top:auto;align-self:flex-start;}
+
+/* BUNDLE */
+.bundle{background:var(--teal-deep);color:var(--white);border-radius:20px;padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;}
+.bundle h2{color:var(--white);font-size:1.9rem;}
+.bundle p{color:rgba(255,255,255,.82);margin-top:12px;}
+.bundle-list{list-style:none;margin:22px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px 18px;}
+.bundle-list li{font-size:.92rem;color:rgba(255,255,255,.92);padding-left:20px;position:relative;}
+.bundle-list li::before{content:"✓";position:absolute;left:0;color:var(--gold);}
+.bundle-side{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:26px;text-align:center;}
+.bundle-side .price{font-family:'Fraunces',serif;font-size:2rem;color:var(--gold);margin:10px 0 4px;}
+
+/* HOW IT WORKS */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;counter-reset:step;}
+.step{position:relative;padding-top:8px;}
+.step .n{font-family:'Fraunces',serif;font-size:2.1rem;color:var(--gold-deep);}
+.step h3{margin-top:6px;font-size:1.05rem;}
+.step p{margin-top:8px;font-size:.92rem;}
+.steps-note{margin-top:28px;font-size:.88rem;color:var(--ink-soft);border-top:1px solid var(--line);padding-top:18px;}
+
+/* PRICING */
+.price-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+.price-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:24px;display:flex;flex-direction:column;}
+.price-card.featured{border:2px solid var(--gold);position:relative;}
+.price-card .tag{font-size:.78rem;color:var(--ink-soft);font-weight:600;}
+.price-card .amount{font-family:'Fraunces',serif;font-size:1.65rem;color:var(--teal-deep);margin:8px 0 2px;}
+.price-card .amount small{font-family:'Work Sans',sans-serif;font-size:.7rem;color:var(--ink-soft);font-weight:500;}
+.price-card ul{list-style:none;margin:16px 0 20px;padding:0;font-size:.88rem;color:var(--ink-soft);flex-grow:1;}
+.price-card li{padding:5px 0;border-top:1px solid var(--line);}
+.price-card li:first-child{border-top:none;}
+.price-note{margin-top:22px;font-size:.9rem;color:var(--ink-soft);text-align:center;}
+
+/* AUDIT FORM */
+.audit{background:var(--paper-2);border-radius:20px;padding:40px;}
+.audit-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:40px;}
+.audit form{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.audit form .full{grid-column:1/-1;}
+label{display:block;font-size:.82rem;font-weight:600;color:var(--ink-soft);margin-bottom:5px;}
+input,select,textarea{
+  width:100%;padding:11px 13px;border:1px solid var(--line);border-radius:9px;
+  font-family:inherit;font-size:.94rem;background:var(--white);color:var(--ink);
+}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--teal);outline-offset:1px;}
+.audit-note{font-size:.82rem;color:var(--ink-soft);margin-top:6px;}
+.form-msg{display:none;background:var(--teal);color:var(--white);padding:16px 18px;border-radius:10px;margin-top:14px;font-size:.92rem;}
+.form-msg.show{display:block;}
+
+/* PORTFOLIO */
+.portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.pf-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;}
+.pf-shot{height:150px;background:linear-gradient(135deg,var(--teal),var(--teal-deep));position:relative;display:flex;align-items:center;justify-content:center;}
+.pf-shot span{color:rgba(255,255,255,.85);font-family:'Fraunces',serif;font-size:1.1rem;}
+.pf-demo-tag{position:absolute;top:10px;left:10px;background:var(--gold);color:var(--teal-deep);font-size:.7rem;font-weight:700;padding:3px 9px;border-radius:999px;}
+.pf-body{padding:20px;}
+.pf-body h3{font-size:1.02rem;}
+.pf-body .lbl{font-size:.78rem;color:var(--gold-deep);font-weight:700;margin-top:10px;}
+.pf-body p{font-size:.88rem;margin-top:2px;}
+.pf-feat{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;}
+.pf-feat span{font-size:.74rem;background:var(--paper-2);padding:4px 9px;border-radius:999px;color:var(--ink-soft);}
+
+/* GBP / WEBSITE DETAIL */
+.detail{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;}
+.chip-grid{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;}
+.chip{background:var(--white);border:1px solid var(--line);padding:8px 14px;border-radius:999px;font-size:.86rem;color:var(--ink-soft);}
+.dont-box{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:22px;margin-top:18px;}
+.dont-box h4{font-size:1rem;margin-bottom:10px;}
+.dont-box ul{list-style:none;margin:0;padding:0;}
+.dont-box li{font-size:.9rem;color:var(--ink-soft);padding:6px 0 6px 20px;position:relative;}
+.dont-box li::before{content:"✕";position:absolute;left:0;color:#B14B3E;}
+.qwrap{list-style:none;margin:0;padding:0;}
+.qwrap li{padding:14px 0;border-top:1px solid var(--line);font-size:.95rem;}
+.qwrap li:first-child{border-top:none;}
+
+/* TRUST */
+.trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.trust-card{border:1px solid var(--line);border-radius:var(--radius);padding:20px;background:var(--white);font-weight:600;color:var(--teal-deep);font-size:.98rem;}
+
+/* FAQ */
+.faq-item{border-top:1px solid var(--line);padding:18px 0;}
+.faq-item:last-child{border-bottom:1px solid var(--line);}
+.faq-q{display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-weight:600;font-size:1.02rem;color:var(--teal-deep);gap:16px;}
+.faq-q .plus{font-size:1.3rem;color:var(--gold-deep);transition:transform .2s;flex-shrink:0;}
+.faq-item.open .plus{transform:rotate(45deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease;}
+.faq-a p{padding-top:10px;font-size:.94rem;}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;}
+.contact-item{display:flex;gap:14px;padding:16px 0;border-top:1px solid var(--line);}
+.contact-item:first-child{border-top:none;}
+.contact-item b{display:block;font-size:.95rem;}
+.contact-item span{font-size:.88rem;color:var(--ink-soft);}
+.ci-icon{width:38px;height:38px;border-radius:9px;background:var(--paper-2);flex-shrink:0;display:flex;align-items:center;justify-content:center;color:var(--teal);font-weight:700;}
+.map-box{border-radius:var(--radius);background:var(--paper-2);border:1px solid var(--line);height:100%;min-height:220px;display:flex;align-items:center;justify-content:center;color:var(--ink-soft);font-size:.9rem;text-align:center;padding:20px;}
+
+/* FOOTER */
+footer{background:var(--teal-deep);color:rgba(255,255,255,.78);padding:48px 0 26px;margin-top:20px;}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px;}
+footer h4{color:var(--white);font-size:.95rem;margin-bottom:14px;font-family:'Work Sans',sans-serif;font-weight:600;}
+footer ul{list-style:none;margin:0;padding:0;}
+footer li{margin-bottom:8px;font-size:.88rem;}
+footer a:hover{color:var(--gold);}
+.footer-brand{font-family:'Fraunces',serif;color:var(--white);font-size:1.2rem;margin-bottom:10px;}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.14);margin-top:32px;padding-top:18px;font-size:.8rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+
+/* STICKY MOBILE BAR */
+.sticky-bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--white);
+  border-top:1px solid var(--line);display:none;
+  padding-bottom:var(--safe-b);
+}
+.sticky-bar .row{display:grid;grid-template-columns:1fr 1fr 1.3fr;gap:1px;background:var(--line);}
+.sticky-bar a{background:var(--white);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:10px 4px;font-size:.72rem;font-weight:600;color:var(--teal-deep);gap:2px;}
+.sticky-bar a.primary{background:var(--gold);color:var(--teal-deep);}
+@media(max-width:640px){.sticky-bar{display:block;}}
+
+/* RESPONSIVE */
+@media(max-width:980px){
+  .hero-grid,.detail,.audit-grid,.contact-grid{grid-template-columns:1fr;}
+  .card-grid,.portfolio-grid{grid-template-columns:repeat(2,1fr);}
+  .steps{grid-template-columns:repeat(2,1fr);}
+  .price-grid{grid-template-columns:repeat(2,1fr);}
+  .bundle{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+  .trust-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:640px){
+  section{padding:44px 0;}
+  .card-grid,.portfolio-grid,.steps,.price-grid,.problem-list,.bundle-list,.trust-grid{grid-template-columns:1fr;}
+  .audit form{grid-template-columns:1fr;}
+  .compare{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr;}
+  .footer-bottom{flex-direction:column;}
+}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;}}
+:focus-visible{outline:2px solid var(--teal);outline-offset:2px;}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a href="#home" class="brand"><span class="dot"></span>Mirrzora Digital Solutions</a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#contact" class="btn btn-outline btn-sm">WhatsApp Us</a>
+      <a href="#audit" class="btn btn-primary btn-sm">Get Free Business Audit</a>
+      <button class="burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-panel" id="mobilePanel">
+    <a href="#services">Services</a>
+    <a href="#how-it-works">How It Works</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+    <a href="#audit" class="btn btn-primary" style="margin-top:14px;justify-content:center;">Free Audit</a>
+  </div>
+</header>
+
+<main id="home">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow" style="color:var(--teal);">Mirrzora Digital Solutions — Your local business, digitally established</span>
+      <h1>Get More Customers From Your Local Online Presence</h1>
+      <p class="lead">We help local businesses improve their Google Business Profile, launch professional websites and make it easier for customers to call, WhatsApp and enquire.</p>
+      <div class="hero-ctas">
+        <a href="#audit" class="btn btn-gold">Get Free Business Audit</a>
+        <a href="#services" class="btn btn-outline">View Services</a>
+      </div>
+      <p class="trust-line"><b>Built for local businesses</b> · Mobile-first · Practical pricing</p>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <svg viewBox="0 0 200 200" style="position:absolute;right:-30px;top:-30px;opacity:.15;width:220px;" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="100" cy="100" r="90" fill="none" stroke="#E1A73E" stroke-width="2"/>
+        <circle cx="100" cy="100" r="65" fill="none" stroke="#E1A73E" stroke-width="2"/>
+      </svg>
+      <svg viewBox="0 0 60 80" style="position:absolute;left:22px;bottom:18px;width:46px;opacity:.9;" xmlns="http://www.w3.org/2000/svg">
+        <path d="M30 2C14 2 2 14 2 30c0 22 28 48 28 48s28-26 28-48C58 14 46 2 30 2z" fill="#E1A73E"/>
+        <circle cx="30" cy="30" r="12" fill="#0F4C43"/>
+      </svg>
+      <div class="hv-card"><div class="hv-icon">📍</div><div><b>Google Business Profile</b><span>Complete, accurate, easy to find</span></div></div>
+      <div class="hv-card"><div class="hv-icon">🖥️</div><div><b>Business Website</b><span>Mobile-first, built to convert</span></div></div>
+      <div class="hv-card"><div class="hv-icon">💬</div><div><b>WhatsApp Enquiry</b><span>One tap for customers to reach you</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section id="problem">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">The problem</span>
+      <h2>Is Your Business Easy to Find Online?</h2>
+      <p>Most local businesses lose enquiries not because of poor service, but because customers can't find clear, accurate information about them online.</p>
+    </div>
+    <ul class="problem-list">
+      <li>Customers can't easily find accurate information</li>
+      <li>Google Business Profile is incomplete</li>
+      <li>Services are not properly displayed</li>
+      <li>Business photos are outdated</li>
+      <li>No easy way to contact the business</li>
+      <li>No professional website</li>
+      <li>Website isn't mobile-friendly</li>
+      <li>No clear WhatsApp or call CTA</li>
+      <li>Reviews aren't being managed consistently</li>
+      <li>Business information is inconsistent across platforms</li>
+    </ul>
+    <div class="compare" style="margin-top:36px;">
+      <div class="compare-col before">
+        <h3>Before</h3>
+        <ul>
+          <li>Incomplete Google Business Profile</li>
+          <li>No website</li>
+          <li>Few, outdated photos</li>
+          <li>Difficult contact process</li>
+        </ul>
+      </div>
+      <div class="compare-col after">
+        <h3>After</h3>
+        <ul>
+          <li>Complete, well-organized profile</li>
+          <li>Professional mobile-first website</li>
+          <li>Clearly presented services</li>
+          <li>Easy call and WhatsApp enquiry</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Services</span>
+      <h2>Everything Your Local Business Needs Online</h2>
+      <p>Pick a single service or combine them into a complete setup — every service is scoped clearly before work begins.</p>
+    </div>
+    <div class="card-grid">
+      <div class="svc-card">
+        <span class="svc-num">Service 1</span>
+        <h3>Google Business Profile Optimization</h3>
+        <p>Improve the completeness and presentation of your profile so customers can easily understand your business, services, location and contact options.</p>
+        <ul>
+          <li>Profile information &amp; category review</li>
+          <li>Business description &amp; services setup</li>
+          <li>Hours &amp; contact verification</li>
+          <li>Photo organization &amp; Maps review</li>
+          <li>Review-response setup</li>
+        </ul>
+        <a href="#audit" class="btn btn-outline btn-sm">Get GBP Audit</a>
+      </div>
+      <div class="svc-card">
+        <span class="svc-num">Service 2</span>
+        <h3>Business Landing Page</h3>
+        <p>A professional, mobile-friendly website designed to turn visitors into calls, WhatsApp enquiries and appointments.</p>
+        <ul>
+          <li>Responsive design &amp; gallery</li>
+          <li>Services &amp; reviews section</li>
+          <li>Google Maps embed</li>
+          <li>Call &amp; WhatsApp buttons</li>
+          <li>Basic SEO setup</li>
+        </ul>
+        <a href="#audit" class="btn btn-outline btn-sm">Build My Website</a>
+      </div>
+      <div class="svc-card">
+        <span class="svc-num">Service 3</span>
+        <h3>WhatsApp &amp; Call Enquiry Setup</h3>
+        <p>Make it easier for customers to contact your business directly from your website.</p>
+        <ul>
+          <li>WhatsApp click-to-chat CTA</li>
+          <li>Click-to-call button</li>
+          <li>Enquiry contact form</li>
+          <li>Mobile-friendly contact section</li>
+        </ul>
+        <a href="#audit" class="btn btn-outline btn-sm">Add Enquiry System</a>
+      </div>
+      <div class="svc-card">
+        <span class="svc-num">Service 4</span>
+        <h3>Google Reviews Setup</h3>
+        <p>A simple, ethical process that makes it easier for genuine customers to leave feedback.</p>
+        <ul>
+          <li>Google review link &amp; QR code</li>
+          <li>Customer review-request message</li>
+          <li>Review-response workflow</li>
+          <li>Ongoing management guidance</li>
+        </ul>
+        <a href="#audit" class="btn btn-outline btn-sm">Set Up Reviews</a>
+      </div>
+      <div class="svc-card">
+        <span class="svc-num">Service 5</span>
+        <h3>Google Business Profile Management</h3>
+        <p>Keep your profile accurate and active after the initial optimization, every month.</p>
+        <ul>
+          <li>Monthly profile checks</li>
+          <li>Photo &amp; service updates</li>
+          <li>Google Posts where appropriate</li>
+          <li>Review-response assistance</li>
+        </ul>
+        <a href="#audit" class="btn btn-outline btn-sm">Get Monthly Management</a>
+      </div>
+      <div class="svc-card">
+        <span class="svc-num">Service 6</span>
+        <h3>Complete Local Business Setup</h3>
+        <p>Google Business Profile + website + WhatsApp + call button + Maps + review setup, as one project.</p>
+        <ul>
+          <li>Everything in services 1–4, combined</li>
+          <li>Coordinated launch</li>
+          <li>Single point of contact</li>
+        </ul>
+        <a href="#audit" class="btn btn-gold btn-sm">Get Complete Setup</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BUNDLE -->
+<section id="bundle">
+  <div class="wrap">
+    <div class="bundle">
+      <div>
+        <span class="eyebrow" style="color:var(--gold);">Featured</span>
+        <h2>Complete Local Business Online Setup</h2>
+        <p>Everything you need to create a professional online presence for your local business, delivered as one coordinated project.</p>
+        <ul class="bundle-list">
+          <li>Google Business Profile optimization</li>
+          <li>One-page business website</li>
+          <li>WhatsApp integration</li>
+          <li>Click-to-call</li>
+          <li>Google Maps</li>
+          <li>Services section</li>
+          <li>Photo gallery</li>
+          <li>Review setup</li>
+          <li>Mobile responsive design</li>
+        </ul>
+      </div>
+      <div class="bundle-side">
+        <span style="font-size:.85rem;color:rgba(255,255,255,.75);">Starting from</span>
+        <div class="price">₹5,999</div>
+        <p style="color:rgba(255,255,255,.7);font-size:.85rem;">Final scope confirmed after your free audit</p>
+        <a href="#audit" class="btn btn-gold" style="margin-top:16px;width:100%;justify-content:center;">Request a Free Audit</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how-it-works">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Process</span>
+      <h2>How It Works</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h3>Free Audit</h3><p>We review your current online presence and identify practical improvements.</p></div>
+      <div class="step"><div class="n">2</div><h3>Choose Your Service</h3><p>Select the service or package that fits your business.</p></div>
+      <div class="step"><div class="n">3</div><h3>We Build &amp; Optimize</h3><p>We implement the agreed changes and create your website if included.</p></div>
+      <div class="step"><div class="n">4</div><h3>Launch &amp; Support</h3><p>Your online presence goes live, followed by optional monthly support.</p></div>
+    </div>
+    <p class="steps-note">Project scope, timelines and revisions are agreed before work begins.</p>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Pricing</span>
+      <h2>Transparent Starter Pricing</h2>
+      <p>All prices are starting prices — your final quote depends on your business and requirements.</p>
+    </div>
+    <div class="price-grid">
+      <div class="price-card">
+        <span class="tag">GBP Starter</span>
+        <div class="amount">₹1,499</div>
+        <ul>
+          <li>GBP information review</li>
+          <li>Category review</li>
+          <li>Business description</li>
+          <li>Services organization</li>
+          <li>Basic profile recommendations</li>
+        </ul>
+        <a href="#audit" class="btn btn-outline btn-sm">Get Started</a>
+      </div>
+      <div class="price-card">
+        <span class="tag">GBP Management</span>
+        <div class="amount">₹1,500<small>/month</small></div>
+        <ul>
+          <li>Profile monitoring</li>
+          <li>Review-response assistance</li>
+          <li>Photo &amp; service updates</li>
+          <li>Monthly updates</li>
+          <li>Basic performance review</li>
+        </ul>
+        <a href="#audit" class="btn btn-outline btn-sm">Monthly Management</a>
+      </div>
+      <div class="price-card">
+        <span class="tag">Business Landing Page</span>
+        <div class="amount">₹3,999<small>starting from</small></div>
+        <ul>
+          <li>One-page responsive website</li>
+          <li>Services, about &amp; gallery</li>
+          <li>Google Maps</li>
+          <li>WhatsApp &amp; call button</li>
+          <li>Basic SEO structure</li>
+        </ul>
+        <a href="#audit" class="btn btn-outline btn-sm">Request Website</a>
+      </div>
+      <div class="price-card featured">
+        <span class="tag">Complete Business Setup</span>
+        <div class="amount">₹5,999<small>starting from</small></div>
+        <ul>
+          <li>GBP optimization</li>
+          <li>One-page website</li>
+          <li>WhatsApp &amp; click-to-call</li>
+          <li>Google Maps</li>
+          <li>Review setup &amp; launch support</li>
+        </ul>
+        <a href="#audit" class="btn btn-gold btn-sm">Request Complete Setup</a>
+      </div>
+    </div>
+    <p class="price-note">Custom requirements? <a href="#contact" style="color:var(--teal);font-weight:600;">Contact us</a> for a tailored quote.</p>
+  </div>
+</section>
+
+<!-- GBP DETAIL -->
+<section id="gbp-detail">
+  <div class="wrap detail">
+    <div>
+      <span class="eyebrow">Google Business Profile</span>
+      <h2>Google Business Profile Optimization</h2>
+      <p style="margin-top:14px;">We help you organize and improve the information customers see when they find your business on Google.</p>
+      <div class="chip-grid">
+        <span class="chip">Profile information</span>
+        <span class="chip">Categories</span>
+        <span class="chip">Services</span>
+        <span class="chip">Business description</span>
+        <span class="chip">Hours</span>
+        <span class="chip">Photos</span>
+        <span class="chip">Reviews</span>
+        <span class="chip">Posts / updates</span>
+        <span class="chip">Website integration</span>
+        <span class="chip">Contact options</span>
+      </div>
+    </div>
+    <div class="dont-box">
+      <h4>What We Don't Promise</h4>
+      <ul>
+        <li>No guaranteed #1 ranking</li>
+        <li>No fake reviews</li>
+        <li>No purchased reviews</li>
+        <li>No misleading business information</li>
+        <li>No keyword stuffing</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- WEBSITE DETAIL -->
+<section id="website-detail" style="background:var(--paper-2);">
+  <div class="wrap detail">
+    <div>
+      <span class="eyebrow">Business websites</span>
+      <h2>Professional One-Page Websites for Local Businesses</h2>
+      <p style="margin-top:14px;">Your website should answer three questions quickly: what do you offer, where are you located, and how can I contact you?</p>
+      <div class="chip-grid">
+        <span class="chip">Hero</span><span class="chip">Services</span><span class="chip">About</span>
+        <span class="chip">Gallery</span><span class="chip">Reviews</span><span class="chip">Why choose us</span>
+        <span class="chip">Location</span><span class="chip">Contact</span><span class="chip">WhatsApp CTA</span>
+      </div>
+    </div>
+    <div class="dont-box" style="background:var(--white);">
+      <h4>Built in from day one</h4>
+      <ul style="list-style:none;">
+        <li style="padding-left:0;">✓ Mobile-first &amp; responsive</li>
+        <li style="padding-left:0;">✓ Fast-loading</li>
+        <li style="padding-left:0;">✓ SEO-friendly structure</li>
+        <li style="padding-left:0;">✓ Google Maps embedded</li>
+        <li style="padding-left:0;">✓ WhatsApp &amp; click-to-call</li>
+      </ul>
+      <a href="#audit" class="btn btn-primary btn-sm" style="margin-top:14px;">Request a Website</a>
+    </div>
+  </div>
+</section>
+
+<!-- FREE AUDIT FORM -->
+<section id="audit">
+  <div class="wrap">
+    <div class="audit">
+      <div class="audit-grid">
+        <div>
+          <span class="eyebrow">Free audit</span>
+          <h2>Get a Free Online Presence Audit</h2>
+          <p style="margin-top:14px;">Tell us about your business and we'll review your current online presence and send practical, specific recommendations.</p>
+        </div>
+        <div>
+          <form id="auditForm">
+            <div><label for="f-name">Name</label><input id="f-name" name="name" required></div>
+            <div><label for="f-business">Business Name</label><input id="f-business" name="business" required></div>
+            <div><label for="f-phone">Phone / WhatsApp</label><input id="f-phone" name="phone" required></div>
+            <div><label for="f-email">Email</label><input id="f-email" type="email" name="email"></div>
+            <div><label for="f-category">Business Category</label><input id="f-category" name="category" placeholder="e.g. Salon, Restaurant, Clinic"></div>
+            <div><label for="f-location">Business Location</label><input id="f-location" name="location" placeholder="e.g. Bally, Howrah"></div>
+            <div class="full"><label for="f-gbp">Google Business Profile URL</label><input id="f-gbp" name="gbpUrl" placeholder="Optional"></div>
+            <div class="full"><label for="f-website">Website URL</label><input id="f-website" name="websiteUrl" placeholder="Optional"></div>
+            <div class="full">
+              <label for="f-need">What do you need help with?</label>
+              <select id="f-need" name="need">
+                <option>Google Business Profile</option>
+                <option>Website</option>
+                <option>WhatsApp Setup</option>
+                <option>Google Reviews</option>
+                <option>Complete Setup</option>
+                <option>Not Sure</option>
+              </select>
+            </div>
+            <div class="full">
+              <button type="submit" class="btn btn-gold" style="width:100%;justify-content:center;">Request Free Audit</button>
+              <p class="audit-note">We'll review your business presence and get back to you — no automatic sign-ups, no spam.</p>
+            </div>
+          </form>
+          <div class="form-msg" id="formMsg">Thanks! We'll review your business presence and contact you with practical recommendations.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Portfolio</span>
+      <h2>Example Projects</h2>
+      <p>These are demo projects built to show our approach and quality of work — not existing client businesses.</p>
+    </div>
+    <div class="portfolio-grid">
+      <div class="pf-card">
+        <div class="pf-shot"><span class="pf-demo-tag">Demo Project</span><span>Salon Website</span></div>
+        <div class="pf-body">
+          <h3>Salon Website — Demo</h3>
+          <p class="lbl">Problem</p><p>No professional website and unclear service presentation.</p>
+          <p class="lbl">Solution</p><p>Mobile-first landing page with services, gallery, WhatsApp and Google Maps.</p>
+          <div class="pf-feat"><span>Responsive</span><span>WhatsApp CTA</span><span>Call button</span><span>Gallery</span><span>Map</span></div>
+          <a href="salon.html" target="_blank" rel="noopener" class="btn btn-outline btn-sm" style="margin-top:14px;">View Demo Website</a>
+        </div>
+      </div>
+      <div class="pf-card">
+        <div class="pf-shot"><span class="pf-demo-tag">Demo Project</span><span>Restaurant Website</span></div>
+        <div class="pf-body">
+          <h3>Restaurant Website — Demo</h3>
+          <p class="lbl">Problem</p><p>Menu and location information scattered across social media only.</p>
+          <p class="lbl">Solution</p><p>Single-page site with menu highlights, location, hours and enquiry options.</p>
+          <div class="pf-feat"><span>Responsive</span><span>Menu section</span><span>Maps</span><span>WhatsApp order enquiry</span></div>
+          <a href="restaurant.html" target="_blank" rel="noopener" class="btn btn-outline btn-sm" style="margin-top:14px;">View Demo Website</a>
+        </div>
+      </div>
+      <div class="pf-card">
+        <div class="pf-shot"><span class="pf-demo-tag">Demo Project</span><span>Coaching Centre</span></div>
+        <div class="pf-body">
+          <h3>Coaching Centre Website — Demo</h3>
+          <p class="lbl">Problem</p><p>Parents couldn't find course details or a simple way to enquire.</p>
+          <p class="lbl">Solution</p><p>Course listing page with batch info, testimonials placeholder and call CTA.</p>
+          <div class="pf-feat"><span>Course listing</span><span>Call button</span><span>Contact form</span></div>
+          <a href="coaching.html" target="_blank" rel="noopener" class="btn btn-outline btn-sm" style="margin-top:14px;">View Demo Website</a>
+        </div>
+      </div>
+      <div class="pf-card">
+        <div class="pf-shot"><span class="pf-demo-tag">Demo Project</span><span>Gym Website</span></div>
+        <div class="pf-body">
+          <h3>Gym Website — Demo</h3>
+          <p class="lbl">Problem</p><p>No online presence beyond a shared board post; membership queries handled ad hoc.</p>
+          <p class="lbl">Solution</p><p>Plans, facilities and trainer info with a direct WhatsApp enquiry button.</p>
+          <div class="pf-feat"><span>Plans section</span><span>Gallery</span><span>WhatsApp CTA</span></div>
+          <a href="gym.html" target="_blank" rel="noopener" class="btn btn-outline btn-sm" style="margin-top:14px;">View Demo Website</a>
+        </div>
+      </div>
+      <div class="pf-card">
+        <div class="pf-shot"><span class="pf-demo-tag">Demo Project</span><span>Local Service Website</span></div>
+        <div class="pf-body">
+          <h3>Local Service Website — Demo</h3>
+          <p class="lbl">Problem</p><p>Repair/service business relied only on word of mouth, hard to find on Google.</p>
+          <p class="lbl">Solution</p><p>Service-area page with services list, click-to-call and Maps embed.</p>
+          <div class="pf-feat"><span>Service area</span><span>Click-to-call</span><span>Maps</span></div>
+          <a href="repair.html" target="_blank" rel="noopener" class="btn btn-outline btn-sm" style="margin-top:14px;">View Demo Website</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section id="trust" style="background:var(--paper-2);">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Why work with us</span>
+      <h2>Built on Practical Trust, Not Promises</h2>
+    </div>
+    <div class="trust-grid">
+      <div class="trust-card">Clear Pricing</div>
+      <div class="trust-card">Defined Scope</div>
+      <div class="trust-card">Mobile-First Design</div>
+      <div class="trust-card">Direct Communication</div>
+      <div class="trust-card">Practical Solutions</div>
+      <div class="trust-card">No Fake Ranking Promises</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap" style="max-width:820px;">
+    <div class="section-head">
+      <span class="eyebrow">FAQ</span>
+      <h2>Common Questions</h2>
+    </div>
+    <div id="faqList">
+      <div class="faq-item">
+        <div class="faq-q"><span>Can you guarantee #1 ranking on Google?</span><span class="plus">+</span></div>
+        <div class="faq-a"><p>No. Local search visibility depends on several factors including relevance, distance and prominence. We focus on improving the accuracy, completeness and presentation of your business information.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>Do I need a website if I already have Google Business Profile?</span><span class="plus">+</span></div>
+        <div class="faq-a"><p>A website isn't mandatory for every business, but a dedicated website can give customers more information and provide a stronger destination for enquiries.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>Do you create websites for mobile users?</span><span class="plus">+</span></div>
+        <div class="faq-a"><p>Yes. All landing pages are designed to work across mobile, tablet and desktop screens.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>Can customers contact me through WhatsApp?</span><span class="plus">+</span></div>
+        <div class="faq-a"><p>Yes. WhatsApp and click-to-call buttons can be integrated into the website.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>Do you provide monthly management?</span><span class="plus">+</span></div>
+        <div class="faq-a"><p>Yes. Monthly Google Business Profile support is available.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>Can you work with businesses outside Kolkata?</span><span class="plus">+</span></div>
+        <div class="faq-a"><p>Yes. Remote projects are available across India.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>Do I need to give you my Google password?</span><span class="plus">+</span></div>
+        <div class="faq-a"><p>No. Business owners should provide appropriate account access through Google's supported user-access system rather than sharing passwords.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>How long does a landing page take?</span><span class="plus">+</span></div>
+        <div class="faq-a"><p>Typical delivery depends on scope and how quickly the required business content and assets are provided. The timeline will be confirmed before the project begins.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="background:var(--paper-2);">
+  <div class="wrap contact-grid">
+    <div>
+      <span class="eyebrow">Contact</span>
+      <h2>Let's Improve Your Business's Online Presence</h2>
+      <div style="margin-top:22px;">
+        <div class="contact-item"><div class="ci-icon">💬</div><div><b>WhatsApp</b><span id="waText">+91 72507 19766</span></div></div>
+        <div class="contact-item"><div class="ci-icon">📞</div><div><b>Phone</b><span id="phoneText">+91 72507 19766</span></div></div>
+        <div class="contact-item"><div class="ci-icon">✉️</div><div><b>Email</b><span id="emailText">muntashir575@gmail.com</span></div></div>
+        <div class="contact-item"><div class="ci-icon">📍</div><div><b>Service Area</b><span>All over Howrah &amp; Kolkata</span></div></div>
+      </div>
+      <div class="hero-ctas" style="margin-top:24px;">
+        <a href="#audit" class="btn btn-primary">Get Free Audit</a>
+        <a id="waBtn" href="#" class="btn btn-outline" target="_blank" rel="noopener">WhatsApp Us</a>
+      </div>
+    </div>
+    <div class="map-box">Google Maps embed placeholder — add your business's Maps embed code (ADDRESS / MAP_EMBED_SRC) here.</div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-grid">
+    <div>
+      <div class="footer-brand">Mirrzora Digital Solutions</div>
+      <p style="color:rgba(255,255,255,.7);font-size:.9rem;">Your local business, digitally established — Google Business Profile and website services for local businesses across Howrah &amp; Kolkata.</p>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Google Business Profile</a></li>
+        <li><a href="#services">Business Websites</a></li>
+        <li><a href="#services">WhatsApp &amp; Call Setup</a></li>
+        <li><a href="#services">Review Setup</a></li>
+        <li><a href="#services">Monthly Management</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#audit">Free Audit</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li>+91 72507 19766</li>
+        <li>muntashir575@gmail.com</li>
+        <li>Howrah &amp; Kolkata</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© <span id="yr"></span> Mirrzora Digital Solutions. All rights reserved.</span>
+    <span><a href="#">Privacy Policy</a> · <a href="#">Terms &amp; Conditions</a> · <a href="#">Refund Policy</a></span>
+  </div>
+</footer>
+
+<div class="sticky-bar" aria-label="Quick actions">
+  <div class="row">
+    <a id="stickyWa" href="#" target="_blank" rel="noopener">💬<span>WhatsApp</span></a>
+    <a id="stickyCall" href="#">📞<span>Call</span></a>
+    <a href="#audit" class="primary">✎<span>Free Audit</span></a>
+  </div>
+</div>
+
+<script>
+// ---- Editable business placeholders ----
+const CONFIG = {
+  BRAND_NAME: "Mirrzora Digital Solutions",
+  TAGLINE: "Your local business, digitally established",
+  PHONE: "+917250719766",
+  WHATSAPP: "917250719766",
+  EMAIL: "muntashir575@gmail.com",
+  ADDRESS: "Serving all over Howrah & Kolkata",
+  CITY: "Howrah & Kolkata",
+  BUSINESS_HOURS: "10am – 7pm, all days",
+  GA_MEASUREMENT_ID: "GA_MEASUREMENT_ID",
+  META_PIXEL_ID: "META_PIXEL_ID"
+};
+
+document.getElementById('waText').textContent = '+91 ' + CONFIG.WHATSAPP.slice(2,7) + ' ' + CONFIG.WHATSAPP.slice(7);
+document.getElementById('phoneText').textContent = '+91 ' + CONFIG.PHONE.slice(3,8) + ' ' + CONFIG.PHONE.slice(8);
+document.getElementById('emailText').textContent = CONFIG.EMAIL;
+const waLink = 'https://wa.me/' + CONFIG.WHATSAPP + '?text=' + encodeURIComponent('Hi, I would like a free business audit.');
+document.getElementById('waBtn').href = waLink;
+document.getElementById('stickyWa').href = waLink;
+document.getElementById('stickyCall').href = 'tel:' + CONFIG.PHONE;
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+// Mobile nav
+const burger = document.getElementById('burgerBtn');
+const panel = document.getElementById('mobilePanel');
+burger.addEventListener('click', () => {
+  const open = panel.classList.toggle('open');
+  burger.setAttribute('aria-expanded', open);
+});
+panel.querySelectorAll('a').forEach(a => a.addEventListener('click', () => panel.classList.remove('open')));
+
+// FAQ accordion
+document.querySelectorAll('.faq-item').forEach(item => {
+  const q = item.querySelector('.faq-q');
+  const a = item.querySelector('.faq-a');
+  q.addEventListener('click', () => {
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(o => { o.classList.remove('open'); o.querySelector('.faq-a').style.maxHeight = null; });
+    if (!isOpen) { item.classList.add('open'); a.style.maxHeight = a.scrollHeight + 'px'; }
+  });
+});
+
+// Audit form — opens the visitor's email app with the enquiry pre-filled, sent to CONFIG.EMAIL.
+// This needs no backend, but it does depend on the visitor having an email app configured
+// (works well on desktop; on some phones it can be unreliable). If that becomes a problem,
+// switching to a form service like Formspree (formspree.io) is a five-minute upgrade later.
+const auditForm = document.getElementById('auditForm');
+const formMsg = document.getElementById('formMsg');
+auditForm.addEventListener('submit', function(e){
+  e.preventDefault();
+  const data = new FormData(this);
+  const lines = [
+    'New audit request from the website',
+    '',
+    'Name: ' + data.get('name'),
+    'Business Name: ' + data.get('business'),
+    'Phone / WhatsApp: ' + data.get('phone'),
+    'Email: ' + (data.get('email') || '—'),
+    'Business Category: ' + (data.get('category') || '—'),
+    'Business Location: ' + (data.get('location') || '—'),
+    'Google Business Profile URL: ' + (data.get('gbpUrl') || '—'),
+    'Website URL: ' + (data.get('websiteUrl') || '—'),
+    'Needs help with: ' + data.get('need')
+  ];
+  const subject = 'Free Audit Request — ' + (data.get('business') || data.get('name'));
+  const body = lines.join('\n');
+  window.location.href = 'mailto:' + CONFIG.EMAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  // window.gtag && window.gtag('event','form_submit',{event_category:'lead'});
+  formMsg.textContent = "Thanks! Your email app should open with the details filled in — just hit send. If it doesn't open, WhatsApp us instead using the button below.";
+  formMsg.classList.add('show');
+  this.reset();
+});
+
+// Basic click tracking hooks (wire to GA/Meta Pixel once IDs are set)
+document.querySelectorAll('a[href^="https://wa.me"]').forEach(a=>a.addEventListener('click',()=>{ /* track WhatsApp click */ }));
+document.querySelectorAll('a[href^="tel:"]').forEach(a=>a.addEventListener('click',()=>{ /* track phone click */ }));
+</script>
+
+<!--
+  Analytics placeholders (uncomment and add real IDs before launch):
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  Meta Pixel: replace META_PIXEL_ID with your real pixel ID.
+-->
+</body>
+</html>
