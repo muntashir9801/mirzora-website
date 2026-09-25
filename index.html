@@ -82,7 +82,7 @@ section{padding:64px 0;}
 .btn-outline:hover{background:var(--teal);color:var(--white);}
 .btn-outline-light{background:transparent;border-color:rgba(255,255,255,.5);color:var(--white);}
 .btn-outline-light:hover{background:rgba(255,255,255,.12);}
-.btn-sm{padding:9px 18px;font-size:.88rem;}
+ .cta-short{display:none;} @media(max-width:640px){ .hero-cta{padding:10px 20px;font-size:.9rem;} .cta-full{display:none;} .cta-short{display:inline;} }
 
 /* NAVBAR */
 header{
@@ -325,7 +325,7 @@ footer a:hover{color:var(--gold);}
       <h1>Get More Customers From Your Local Online Presence</h1>
       <p class="lead">We help local businesses improve their Google Business Profile, launch professional websites and make it easier for customers to call, WhatsApp and enquire.</p>
       <div class="hero-ctas">
-        <a href="#audit" class="btn btn-gold">Get Free Business Audit</a>
+        <a href="#audit" class="btn btn-gold hero-cta"><span class="cta-full">Get Free Business Audit</span><span class="cta-short">Free Audit</span></a>
         <a href="#services" class="btn btn-outline">View Services</a>
       </div>
       <p class="trust-line"><b>Built for local businesses</b> · Mobile-first · Practical pricing</p>
